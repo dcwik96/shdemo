@@ -1,16 +1,18 @@
 package com.example.shdemo.service;
 
-import java.util.List;
-
 import com.example.shdemo.domain.Book;
+
+import java.util.List;
 
 public interface IBook {
 
-	void addBook(Book book);
-	
-	void deleteBook(Book book);
-	
-	List<Book> getBooks();
-	
-	
+    void addBook(Book book);
+
+    void deleteBook(Book book);
+
+    List<Book> getBooks();
+
+    void updateBook(Book oldBook, Book newBook);
+
+
 }
