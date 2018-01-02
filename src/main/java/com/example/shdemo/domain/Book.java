@@ -4,7 +4,8 @@ import javax.persistence.*;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "book.all", query = "Select b from Book b")
+        @NamedQuery(name = "book.all", query = "Select b from Book b"),
+        @NamedQuery(name = "book.unsold", query = "Select b from Book b where b.sold = false")
 })
 public class Book {
 
@@ -12,6 +13,7 @@ public class Book {
     private String title;
     private String author;
     private double prize;
+    private Boolean sold = false;
 
     public Book() {
         super();
@@ -59,5 +61,11 @@ public class Book {
         this.prize = prize;
     }
 
+    public Boolean getSold() {
+        return sold;
+    }
 
+    public void setSold(Boolean sold) {
+        this.sold = sold;
+    }
 }
