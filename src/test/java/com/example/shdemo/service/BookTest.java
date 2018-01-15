@@ -25,28 +25,30 @@ public class BookTest {
     @Autowired
     IBook bookManager;
 
+
+    private final String NAME_1 = "Dawid";
+    private final String NAME_2 = "Pawel";
+    private final String NAME_3 = "Janek";
+
+    Person person1 = new Person(NAME_1);
+    Person person2 = new Person(NAME_2);
+    Person person3 = new Person(NAME_3);
+
     private final String TITLE_1 = "Tytul1";
-    private final String AUTHOR_1 = "Autor1";
+    private final Person AUTHOR_1 = person1;
     private final double PRICE_1 = 19.90;
 
     private final static String TITLE_2 = "QuoVadis";
-    private final static String AUTHOR_2 = "Heniu Siena";
+    private final Person AUTHOR_2 = person2;
     private final static double PRICE_2 = 10.99;
 
     private final static String TITLE_3 = "Niebieska Mila";
-    private final static String AUTHOR_3 = "Stephen Queen";
+    private final  Person AUTHOR_3 = person3;
     private final static double PRICE_3 = 99.99;
 
     Book book1 = new Book(null, TITLE_1, AUTHOR_1, PRICE_1);
     Book book2 = new Book(null, TITLE_2, AUTHOR_2, PRICE_2);
     Book book3 = new Book(null, TITLE_3, AUTHOR_3, PRICE_3);
-
-    private final String NAME_1 = "Dawid";
-    private final String NAME_2 = "Pawel";
-
-    Person person1 = new Person(NAME_1);
-    Person person2 = new Person(NAME_2);
-
 
     @Test
     public void addClientCheck() {

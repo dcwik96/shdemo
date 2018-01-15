@@ -11,7 +11,7 @@ public class Book {
 
     private Long id;
     private String title;
-    private String author;
+    private Person author;
     private double prize;
     private Boolean sold = false;
 
@@ -19,7 +19,7 @@ public class Book {
         super();
     }
 
-    public Book(Long id, String title, String author, double prize) {
+    public Book(Long id, String title, Person author, double prize) {
         super();
         this.id = id;
         this.title = title;
@@ -45,11 +45,12 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor() {
+    @ManyToOne(cascade = CascadeType.ALL)
+    public Person getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Person author) {
         this.author = author;
     }
 
