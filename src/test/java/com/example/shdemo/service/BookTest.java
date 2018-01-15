@@ -2,6 +2,9 @@ package com.example.shdemo.service;
 
 import com.example.shdemo.domain.Book;
 import com.example.shdemo.domain.Person;
+import org.hibernate.LazyInitializationException;
+import org.hibernate.annotations.SourceType;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,7 +120,4 @@ public class BookTest {
         assertEquals(1, ownedBooks.size());
         assertEquals(TITLE_1, ownedBooks.get(0).getTitle());
     }
-
-
-
 }

@@ -45,7 +45,7 @@ public class Book {
         this.title = title;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public Person getAuthor() {
         return author;
     }
