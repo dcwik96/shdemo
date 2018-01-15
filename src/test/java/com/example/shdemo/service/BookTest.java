@@ -2,9 +2,6 @@ package com.example.shdemo.service;
 
 import com.example.shdemo.domain.Book;
 import com.example.shdemo.domain.Person;
-import org.hibernate.LazyInitializationException;
-import org.hibernate.annotations.SourceType;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
